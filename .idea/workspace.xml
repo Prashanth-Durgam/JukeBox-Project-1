@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1c2a9c44-50fe-4dbe-a011-904a8b4ea71c" name="Changes" comment="PROJECT1" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2FIBJlekH3I5zEMKW9ACLaj0J8O" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Prashanth/Desktop/Project JukeBox/JukeBox-Project-1&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
+  }
+}</component>
+  <component name="RunManager" selected="Application.MainMethod">
+    <configuration name="MainMethod" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.Music.JukeBox.Implementation.MainMethod" />
+      <module name="JukeBox" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.Music.JukeBox.Implementation.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SongsDAOTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JukeBox" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SongsDAOTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SongsDAOTest.CheckingInsertion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JukeBox" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SongsDAOTest" />
+      <option name="METHOD_NAME" value="CheckingInsertion" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SongsServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JukeBox" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SongsServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SongsServiceTest.getSongbySongName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JukeBox" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SongsServiceTest" />
+      <option name="METHOD_NAME" value="getSongbySongName" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MainMethod" />
+        <item itemvalue="JUnit.SongsServiceTest" />
+        <item itemvalue="JUnit.SongsServiceTest.getSongbySongName" />
+        <item itemvalue="JUnit.SongsDAOTest.CheckingInsertion" />
+        <item itemvalue="JUnit.SongsDAOTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1c2a9c44-50fe-4dbe-a011-904a8b4ea71c" name="Changes" comment="" />
+      <created>1664169652290</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1664169652290</updated>
+    </task>
+    <task id="LOCAL-00001" summary="PROJECT">
+      <created>1664175002752</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1664175002752</updated>
+    </task>
+    <task id="LOCAL-00002" summary="PROJECT">
+      <created>1664180450684</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1664180450684</updated>
+    </task>
+    <task id="LOCAL-00003" summary="PROJECT">
+      <created>1664182098937</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1664182098937</updated>
+    </task>
+    <task id="LOCAL-00004" summary="PROJECT">
+      <created>1664186431848</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1664186431848</updated>
+    </task>
+    <task id="LOCAL-00005" summary="PROJECT">
+      <created>1664187879982</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1664187879982</updated>
+    </task>
+    <task id="LOCAL-00006" summary="PROJECT">
+      <created>1664193149288</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1664193149288</updated>
+    </task>
+    <task id="LOCAL-00007" summary="PROJECT">
+      <created>1664195107581</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1664195107581</updated>
+    </task>
+    <task id="LOCAL-00008" summary="PROJECT">
+      <created>1664196761316</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1664196761316</updated>
+    </task>
+    <task id="LOCAL-00009" summary="PROJECT">
+      <created>1664205051481</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1664205051481</updated>
+    </task>
+    <task id="LOCAL-00010" summary="PROJECT">
+      <created>1664249322483</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1664249322483</updated>
+    </task>
+    <task id="LOCAL-00011" summary="PROJECT">
+      <created>1664265605880</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1664265605880</updated>
+    </task>
+    <task id="LOCAL-00012" summary="PROJECT">
+      <created>1664275755658</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1664275755658</updated>
+    </task>
+    <task id="LOCAL-00013" summary="PROJECT">
+      <created>1664278923238</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1664278923238</updated>
+    </task>
+    <task id="LOCAL-00014" summary="PROJECT">
+      <created>1664282518475</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1664282518475</updated>
+    </task>
+    <task id="LOCAL-00015" summary="PROJECT">
+      <created>1664289446038</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1664289446038</updated>
+    </task>
+    <task id="LOCAL-00016" summary="PROJECT">
+      <created>1664370140224</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1664370140224</updated>
+    </task>
+    <task id="LOCAL-00017" summary="PROJECT">
+      <created>1664391014413</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1664391014413</updated>
+    </task>
+    <task id="LOCAL-00018" summary="PROJECT">
+      <created>1664391540712</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1664391540712</updated>
+    </task>
+    <task id="LOCAL-00019" summary="PROJECT">
+      <created>1664455733012</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1664455733012</updated>
+    </task>
+    <task id="LOCAL-00020" summary="PROJECT">
+      <created>1664455795644</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1664455795644</updated>
+    </task>
+    <task id="LOCAL-00021" summary="PROJECT">
+      <created>1664466170957</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1664466170957</updated>
+    </task>
+    <task id="LOCAL-00022" summary="PROJECT">
+      <created>1664466426543</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1664466426543</updated>
+    </task>
+    <task id="LOCAL-00023" summary="PROJECT1">
+      <created>1664527500244</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1664527500244</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+    <MESSAGE value="PROJECT" />
+    <MESSAGE value="PROJECT1" />
+    <option name="LAST_COMMIT_MESSAGE" value="PROJECT1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/SongsDAOTest.java</url>
+          <line>22</line>
+          <properties class="SongsDAOTest" method="CheckingInsertion">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/JukeBox$SongsServiceTest.ic" NAME="SongsServiceTest Coverage Results" MODIFIED="1664207966010" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>
