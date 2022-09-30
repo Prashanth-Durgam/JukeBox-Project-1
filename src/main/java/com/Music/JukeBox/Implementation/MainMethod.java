@@ -283,6 +283,7 @@ public class MainMethod {
                     break;
                 case 4:
                     System.out.println("------------------------Thank you-------------------------");
+                    System.out.println("--------I'll be Waiting for you until we meet again---------");
                     System.out.println("---------------------Have A Great Day----------------------");
                     System.exit(0);
                     break;
