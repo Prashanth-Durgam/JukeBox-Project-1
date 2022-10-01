@@ -18,7 +18,7 @@ public class MainMethod {
         System.out.println("--------------------------------------------------------");
         System.out.println("Please select appropriate option below : ");
         System.out.println("--------------------------------------------------------");
-        System.out.println("1		Song\n2		Playlist\n3		Player\n4		Exit\n");
+        System.out.println("1		Song\n2		Playlist\n3		Player\n4		Exit\n5		Delete All the Database Content");
         System.out.println("--------------------------------------------------------");}
     void displaySongmenu(){
         System.out.println("--------------------------------------------------------");
@@ -53,19 +53,8 @@ public class MainMethod {
             char ans1;
             char ans2;
         try {
-           /* boolean deletesongs=songsService.deleteSongTable();
-            if(deletesongs)
-                System.out.println("Table content deleted sucessfully");
-            boolean deleteplaylits=playListService.deletePlayListTable();
-            if(deleteplaylits)
-                System.out.println("Table content deleted sucessfully");
-            boolean deleteContent=playListContentService.deleteContentTable();
-            if(deleteContent)
-                System.out.println("Table content deleted sucessfully"); */
             Hashtable<String, Integer> playList;
             ArrayList<Songs> sList;
-           // ArrayList<Songs> sList = songsService.getSongs();
-           // Hashtable<String, Integer> playList = playListService.getAllPlaylist();
             System.out.println();
             System.out.println("-------------------------------------------$ Welcome to JukeBox $-------------------------------------------------------");
             System.out.println("-------------------------------------$ Where words fail Music Speaks $--------------------------------------------------");
@@ -73,7 +62,6 @@ public class MainMethod {
             System.out.println();
             songsService.displaySongs();
             System.out.println("------------------------------------------------------------------------------------------------------------------------");
-
             System.out.println();
             do{
             obj.displayMenu();
@@ -337,6 +325,23 @@ public class MainMethod {
                     System.out.println("---------------------Have A Great Day----------------------");
                     System.exit(0);
                     break;
+                case 5:
+                            boolean deleteContent=playListContentService.deleteContentTable();
+                            if(deleteContent)
+                                System.out.println("All PlayList Songs deleted Sucessfully");
+                            else{
+                                System.out.println("There is No Data delete in Playlist's ");}
+                            boolean deleteplaylits=playListService.deletePlayListTable();
+                            if(deleteplaylits)
+                                System.out.println("All PlayList's Deleted Sucessfully");
+                            else{
+                                System.out.println("There Are No Playlist's to Delete");}
+                            boolean deletesongs=songsService.deleteSongTable();
+                            if(deletesongs)
+                                System.out.println("All Songs Deleted sucessfully");
+                            else{
+                                System.out.println("There Are No Songs to Delete");}
+                            break;
                 }
                 System.out.println("------------------------------------------------------------------------------------------------------------------------");
                 System.out.println("Enter 'y' to continue to Main Menu: ");
