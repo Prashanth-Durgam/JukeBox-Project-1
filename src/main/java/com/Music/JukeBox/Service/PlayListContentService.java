@@ -76,7 +76,7 @@ public boolean assAlbumToPlaylist(ArrayList<Songs> songslist, Hashtable<String, 
                     }
                 }
             } else {
-                throw new Exception(" Sorry Playlist is Empty ");
+                throw new Exception("Sorry Selected Playlist is Empty ");
             }
         }return songList;
     }

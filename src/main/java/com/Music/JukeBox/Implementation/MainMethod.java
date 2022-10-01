@@ -2,15 +2,16 @@ package com.Music.JukeBox.Implementation;
 
 import com.Music.JukeBox.Service.PlayListContentService;
 import com.Music.JukeBox.Service.PlayListService;
+import com.Music.JukeBox.Service.PlayerService;
 import com.Music.JukeBox.Service.SongsService;
 import com.Music.JukeBox.model.Songs;
 
 import javax.sound.midi.Soundbank;
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
+import java.io.IOException;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.Hashtable;
-import java.util.Scanner;
-import java.util.Set;
+import java.util.*;
 
 public class MainMethod {
     void displayMenu(){
@@ -35,15 +36,22 @@ public class MainMethod {
         System.out.format("%6s\t%25s\t%25s\t%10s\t%20s\t\t%10s", "SONG ID", "SONG NAME", "ARTIST NAME", "GENRE", "ALBUM NAME", "DURATION \n");
         System.out.println("------------------------------------------------------------------------------------------------------------------------");
     }
-        public static void main(String[] args) {
+    void playermenu(){
+        System.out.println("--------------------------------------------------------");
+        System.out.println("Please select appropriate option below : ");
+        System.out.println("--------------------------------------------------------");
+        System.out.println("1		Pause\n2		Resume\n3		Jump\n4		Restart\n5		Next Song");
+        System.out.println("--------------------------------------------------------");}
+        public static void main(String[] args) throws Exception {
         MainMethod obj = new MainMethod();
         Scanner scanner=new Scanner(System.in);
         SongsService songsService = new SongsService();
         PlayListService playListService = new PlayListService();
         PlayListContentService playListContentService = new PlayListContentService();
+        PlayerService playerService=new PlayerService();
             char ans;
             char ans1;
-            char ans2 ;
+            char ans2;
         try {
            /* boolean deletesongs=songsService.deleteSongTable();
             if(deletesongs)
@@ -280,7 +288,49 @@ public class MainMethod {
                     }while (ans2=='y');
                     break;
                 case 3:
-                    break;
+                    playList = playListService.getAllPlaylist();
+                    sList = songsService.getSongs();
+                    char next;
+                    int id;
+                    do{
+                        boolean quit = false;
+                        System.out.println("Please Enter the PlayList Name That you wanted to Play");
+                        scanner.nextLine();
+                        String playlistName=scanner.nextLine();
+                        ArrayList<Songs> playlistSongs= playListContentService.playListContent(playlistName,playList,sList);
+                        Iterator<Songs> iterator = playlistSongs.iterator();
+                         id=iterator.next().getSongID();
+                         playerService.playSongs(id);
+                             while (!quit){
+                                 obj.playermenu();
+                                 int action = scanner.nextInt();
+                                 scanner.nextLine();
+                                 switch (action){
+                                    case 1: playerService.pause();
+                                            break;
+                                    case 2: playerService.resume(id);
+                                            break;
+                                    case 3:playerService.jump();
+                                            break;
+                                    case 4:playerService.restart(id);
+                                            break;
+                                    case 5: if(iterator.hasNext()){
+                                            id = iterator.next().getSongID();
+                                            playerService.stop();
+                                            playerService.playSongs(id); }
+                                        else {
+                                            playerService.stop();
+                                            System.out.println("There is No Next Song Available in PlayList");
+                                            quit=true;
+                                        }
+                                        break;
+                                     case 6: playerService.play();
+                                    }
+                             }
+                        System.out.println("Do you want to continue to another Playlist? prees 'y' ");
+                        next=scanner.next().charAt(0);
+                }while (next=='y'); break;
+
                 case 4:
                     System.out.println("------------------------Thank you-------------------------");
                     System.out.println("--------I'll be Waiting for you until we meet again---------");
