@@ -18,7 +18,7 @@ public class PlayerService {
    public void play()
     {
         clip.start();
-        System.out.println("Song is Playing Sucessfully");
+        System.out.println("Song is Playing Successfully");
         status="play";
     }
     public void pause(){
@@ -27,31 +27,37 @@ public class PlayerService {
         System.out.println("Song is paused......!");
         status="paused";
     }
-    public void resume(int id) throws UnsupportedAudioFileException, LineUnavailableException, IOException {
-       if(status.equals("play")){
-           System.out.println("Song is Alraedy Playing..!!");
+   /* public void resume(int id) throws UnsupportedAudioFileException, LineUnavailableException, IOException {
+     if(status.equals("play")){
+           System.out.println("Song is Already Playing..!!");
            return;
        }
         clip.close();
         resetAudio(id);
         clip.setMicrosecondPosition(presentFrame);
-        this.play();
-    }
+        play();
+    } */
     public void restart(int id) throws UnsupportedAudioFileException, LineUnavailableException, IOException {
         clip.stop();
         clip.close();
         resetAudio(id);
         presentFrame=0L;
         clip.setMicrosecondPosition(0);
-        this.play();
+        System.out.println("Song is Restarting");
+        play();
     }
     public void stop(){
         presentFrame=0L;
         clip.stop();
         clip.close();
     }
-    public void jump(){
-        clip.setMicrosecondPosition(clip.getMicrosecondPosition() + 5000000);
+    public void forward(){
+        System.out.println("Song Forwarded by 10 Sec");
+        clip.setMicrosecondPosition(clip.getMicrosecondPosition() + 10000000);
+    }
+    public void backward(){
+        System.out.println("Song Backwarded by 10 Sec");
+        clip.setMicrosecondPosition(clip.getMicrosecondPosition() - 10000000);
     }
    public void resetAudio( int id) throws UnsupportedAudioFileException, LineUnavailableException, IOException {
        AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File("src/main/resources/" + id + ".wav"));

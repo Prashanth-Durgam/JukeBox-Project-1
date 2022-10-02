@@ -40,7 +40,7 @@ public class MainMethod {
         System.out.println("--------------------------------------------------------");
         System.out.println("Please select appropriate option below : ");
         System.out.println("--------------------------------------------------------");
-        System.out.println("1		Pause\n2		Resume\n3		Jump\n4		Restart\n5		Next Song");
+        System.out.println("1		Pause\n2		Resume\n3		Forward\n4		Backward\n5		Restart\n6		Next Song");
         System.out.println("--------------------------------------------------------");}
         public static void main(String[] args) throws Exception {
         MainMethod obj = new MainMethod();
@@ -268,6 +268,7 @@ public class MainMethod {
                                 break;
                              default:
                                 System.out.println("Sorry you have selected the wrong option: \n");
+                                break;
                          }
                         System.out.println("------------------------------------------------------------------------------------------------------------------------");
                         System.out.println("Enter 'y' to continue to PlayList Menu : ");
@@ -282,7 +283,9 @@ public class MainMethod {
                     int id;
                     do{
                         boolean quit = false;
+                        System.out.println("--------------------------------------------------------");
                         System.out.println("Please Enter the PlayList Name That you wanted to Play");
+                        System.out.println("--------------------------------------------------------");
                         scanner.nextLine();
                         String playlistName=scanner.nextLine();
                         ArrayList<Songs> playlistSongs= playListContentService.playListContent(playlistName,playList,sList);
@@ -292,30 +295,43 @@ public class MainMethod {
                              while (!quit){
                                  obj.playermenu();
                                  int action = scanner.nextInt();
+                                 System.out.println("--------------------------------------------------------");
                                  scanner.nextLine();
                                  switch (action){
                                     case 1: playerService.pause();
                                             break;
-                                    case 2: playerService.resume(id);
+                                    case 2: //playerService.resume(id);
+                                            playerService.play();
                                             break;
-                                    case 3:playerService.jump();
+                                    case 3: playerService.forward();
                                             break;
-                                    case 4:playerService.restart(id);
+                                    case 4: playerService.backward();
                                             break;
-                                    case 5: if(iterator.hasNext()){
+                                    case 5:
+                                            playerService.restart(id);
+                                            break;
+                                    case 6: if(iterator.hasNext()){
                                             id = iterator.next().getSongID();
                                             playerService.stop();
+                                            System.out.println("Song is Playing Sucessfully");
                                             playerService.playSongs(id); }
                                         else {
                                             playerService.stop();
+                                            System.out.println("--------------------------------------------------------");
                                             System.out.println("There is No Next Song Available in PlayList");
                                             quit=true;
                                         }
                                         break;
-                                     case 6: playerService.play();
+                                     default:
+                                         System.out.println("Sorry You have selected the wrong Option");
+                                         quit=true;
+                                         playerService.stop();
+                                         break;
                                     }
                              }
+                        System.out.println("--------------------------------------------------------");
                         System.out.println("Do you want to continue to another Playlist? prees 'y' ");
+                        System.out.println("--------------------------------------------------------");
                         next=scanner.next().charAt(0);
                 }while (next=='y'); break;
 
@@ -328,17 +344,17 @@ public class MainMethod {
                 case 5:
                             boolean deleteContent=playListContentService.deleteContentTable();
                             if(deleteContent)
-                                System.out.println("All PlayList Songs deleted Sucessfully");
+                                System.out.println("All PlayList Songs deleted Successfully");
                             else{
                                 System.out.println("There is No Data delete in Playlist's ");}
                             boolean deleteplaylits=playListService.deletePlayListTable();
                             if(deleteplaylits)
-                                System.out.println("All PlayList's Deleted Sucessfully");
+                                System.out.println("All PlayList's Deleted Successfully");
                             else{
                                 System.out.println("There Are No Playlist's to Delete");}
                             boolean deletesongs=songsService.deleteSongTable();
                             if(deletesongs)
-                                System.out.println("All Songs Deleted sucessfully");
+                                System.out.println("All Songs Deleted successfully");
                             else{
                                 System.out.println("There Are No Songs to Delete");}
                             break;
