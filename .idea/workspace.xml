@@ -7,7 +7,11 @@
     <list default="true" id="1c2a9c44-50fe-4dbe-a011-904a8b4ea71c" name="Changes" comment="PROJECT1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Music/JukeBox/Implementation/MainMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Music/JukeBox/Implementation/MainMethod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Music/JukeBox/Service/PlayListContentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Music/JukeBox/Service/PlayListContentService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Music/JukeBox/Service/PlayerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Music/JukeBox/Service/PlayerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Music/JukeBox/Service/SongsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Music/JukeBox/Service/SongsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Music/JukeBox/model/Songs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Music/JukeBox/model/Songs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SongsServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SongsServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +41,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Prashanth/Desktop/Project JukeBox/JukeBox-Project-1&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Prashanth/Desktop/JukeBox-Project-1&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
@@ -58,8 +62,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SongsDAOTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="JukeBox" />
+    <configuration name="SongsDAOTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JukeBox-Project-1" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="SongsDAOTest" />
       <option name="TEST_OBJECT" value="class" />
@@ -68,7 +72,7 @@
       </method>
     </configuration>
     <configuration name="SongsDAOTest.CheckingInsertion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="JukeBox" />
+      <module name="JukeBox-Project-1" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="SongsDAOTest" />
       <option name="METHOD_NAME" value="CheckingInsertion" />
@@ -77,8 +81,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SongsServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="JukeBox" />
+    <configuration name="SongsDAOTest.selectAllSongs" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JukeBox-Project-1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SongsDAOTest" />
+      <option name="METHOD_NAME" value="selectAllSongs" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SongsServiceTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JukeBox-Project-1" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="SongsServiceTest" />
       <option name="TEST_OBJECT" value="class" />
@@ -86,23 +100,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SongsServiceTest.getSongbySongName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="JukeBox" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SongsServiceTest" />
-      <option name="METHOD_NAME" value="getSongbySongName" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MainMethod" />
-        <item itemvalue="JUnit.SongsServiceTest" />
-        <item itemvalue="JUnit.SongsServiceTest.getSongbySongName" />
         <item itemvalue="JUnit.SongsDAOTest.CheckingInsertion" />
-        <item itemvalue="JUnit.SongsDAOTest" />
+        <item itemvalue="JUnit.SongsServiceTest (1)" />
+        <item itemvalue="JUnit.SongsDAOTest (1)" />
+        <item itemvalue="JUnit.SongsDAOTest.selectAllSongs" />
+        <item itemvalue="Application.MainMethod" />
       </list>
     </recent_temporary>
   </component>
@@ -311,7 +315,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664641207740</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="PROJECT1">
+      <created>1664694101541</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1664694101541</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -332,21 +343,6 @@
     <MESSAGE value="PROJECT" />
     <MESSAGE value="PROJECT1" />
     <option name="LAST_COMMIT_MESSAGE" value="PROJECT1" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/test/java/SongsDAOTest.java</url>
-          <line>22</line>
-          <properties class="SongsDAOTest" method="CheckingInsertion">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/JukeBox$SongsServiceTest.ic" NAME="SongsServiceTest Coverage Results" MODIFIED="1664207966010" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

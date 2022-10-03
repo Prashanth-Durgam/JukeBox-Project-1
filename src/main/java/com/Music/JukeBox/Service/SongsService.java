@@ -10,9 +10,9 @@ import java.util.Iterator;
 public class SongsService {
     SongsDAO songsDAO = new SongsDAO();
 
-    private boolean checkSongpresent(String song, ArrayList<Songs> songlist) throws Exception {
+    private boolean checkSongpresent(String song, ArrayList<Songs> songlist) throws JukeBoxException {
        if(song==null||songlist.isEmpty()){
-           throw new Exception("Please provide valid inputs");
+           throw new JukeBoxException("Please provide valid inputs");
        } else{
         boolean result = false;
         for (Songs songs : songlist) {
@@ -24,11 +24,12 @@ public class SongsService {
         return result;
     } }
 
-    public boolean insertingSongs(Songs song, ArrayList<Songs> songlist) throws Exception {
-       if(song==null||songlist.isEmpty()){
-           throw new Exception("Please provide valid inputs");
-       } else{
+    public boolean insertingSongs(Songs song, ArrayList<Songs> songlist) throws JukeBoxException, SQLException {
         boolean result = false;
+        if(song==null||songlist.isEmpty()){
+           throw new JukeBoxException("Please provide valid inputs");
+       } else{
+       // boolean result = false;
         if (checkSongpresent(song.getSongName(), songlist) == false) {
             result = songsDAO.insertSongs(song);
         }
@@ -50,7 +51,7 @@ public class SongsService {
         }
     }
 
-    public ArrayList<Songs> getSongsbyAlbumName(String albumName, ArrayList<Songs> songList) throws Exception{
+    public ArrayList<Songs> getSongsbyAlbumName(String albumName, ArrayList<Songs> songList) throws JukeBoxException{
         ArrayList<Songs> songsByAlbum = null;
         if (songList.isEmpty() == false&&albumName!=null) {
             songsByAlbum = new ArrayList<>();
@@ -60,12 +61,12 @@ public class SongsService {
                 }
             }
         } else {
-            throw new Exception("Please provide valid inputs");
+            throw new JukeBoxException("Please provide valid inputs");
         }
         return songsByAlbum;
     }
 
-    public ArrayList<Songs> getSongBySongName(String songName,ArrayList<Songs> songList) throws Exception{
+    public ArrayList<Songs> getSongBySongName(String songName,ArrayList<Songs> songList) throws JukeBoxException{
         ArrayList<Songs> songByName = null;
         if (songList.isEmpty() == false&&songName!=null) {
             songByName = new ArrayList<>();
@@ -76,12 +77,12 @@ public class SongsService {
                 }
             }
         } else {
-            throw new Exception("Please provide valid inputs");
+            throw new JukeBoxException("Please provide valid inputs");
         }
         return songByName;
     }
 
-    public ArrayList<Songs> getSongsbyArtistName(String artistName, ArrayList<Songs> songList) throws Exception{
+    public ArrayList<Songs> getSongsbyArtistName(String artistName, ArrayList<Songs> songList) throws JukeBoxException{
         ArrayList<Songs> songsByArtist = null;
         if (songList.isEmpty() == false&& artistName!=null) {
             songsByArtist = new ArrayList<>();
@@ -91,12 +92,12 @@ public class SongsService {
                 }
             }
         } else {
-            throw new Exception("Please provide valid inputs");
+            throw new JukeBoxException("Please provide valid inputs");
         }
         return songsByArtist;
     }
 
-    public ArrayList<Songs> getSongsbyGenre(String genre, ArrayList<Songs> songList) throws Exception{
+    public ArrayList<Songs> getSongsbyGenre(String genre, ArrayList<Songs> songList) throws JukeBoxException{
         ArrayList<Songs> songsByGenre = null;
         if (songList.isEmpty() == false && genre!=null) {
             songsByGenre = new ArrayList<>();
@@ -106,7 +107,7 @@ public class SongsService {
                 }
             }
         } else {
-            throw new Exception("Please provide valid inputs");
+            throw new JukeBoxException("Please provide valid inputs");
         }
         return songsByGenre;
     }

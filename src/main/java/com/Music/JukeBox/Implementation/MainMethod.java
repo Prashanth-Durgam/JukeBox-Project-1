@@ -40,7 +40,7 @@ public class MainMethod {
         System.out.println("--------------------------------------------------------");
         System.out.println("Please select appropriate option below : ");
         System.out.println("--------------------------------------------------------");
-        System.out.println("1		Pause\n2		Resume\n3		Forward\n4		Backward\n5		Restart\n6		Next Song");
+        System.out.println("1		Pause\n2		Resume\n3		Forward\n4		Backward\n5		Restart\n6		Next Song\n7		Stop");
         System.out.println("--------------------------------------------------------");}
         public static void main(String[] args) throws Exception {
         MainMethod obj = new MainMethod();
@@ -322,6 +322,10 @@ public class MainMethod {
                                             quit=true;
                                         }
                                         break;
+                                     case 7: playerService.stop();
+                                             System.out.println("Song is Stopped..!");
+                                             quit=true;
+                                             break;
                                      default:
                                          System.out.println("Sorry You have selected the wrong Option");
                                          quit=true;
@@ -365,9 +369,12 @@ public class MainMethod {
                 ans = scanner.next().charAt(0);
             }
             while (ans=='y');
-        } catch (SQLException e) {
+        }  catch (SQLException e) {
             System.out.println(e.getMessage());
-        } catch (Exception e) {
+        } catch (InputMismatchException e){
+            System.out.println("Sorry You have entered wrong input Type");
+        }
+       catch (Exception e) {
             System.out.println(e.getMessage());
         }
     }

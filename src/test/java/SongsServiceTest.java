@@ -19,10 +19,16 @@ public class SongsServiceTest {
     public void teardown(){
         songsService = null;
     }
-    @Test
-   public void getSongbySongName() throws SQLException{
+   @Test
+  public void getSongbyname() throws Exception {
         ArrayList<Songs> songs =songsService.getSongs();
-        Assert.assertNotEquals("",songsService.getSongBySongName("RAMA", songs));
-}
+
+
+    }
+  /* @Test
+    public void checksongTrue() throws Exception{
+        ArrayList<Songs> songs = songsService.getSongs();
+        Assert.assertTrue(songsService.insertingSongs("Subh",songs));
+   } */
 
 }

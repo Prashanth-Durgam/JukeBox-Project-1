@@ -77,4 +77,5 @@ public class Songs {
     public String toString() {
         return String.format("%6s\t%25s\t%25s\t%10s\t%20s\t\t%6s",songID,songName,artistName,genre,album,duration)+"\n";
     }
+
 }

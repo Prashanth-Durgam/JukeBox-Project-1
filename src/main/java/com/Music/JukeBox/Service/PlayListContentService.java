@@ -12,49 +12,54 @@ public class PlayListContentService {
 
 PlayListContentDAO playListContentDAO = new PlayListContentDAO();
 public boolean addSongsPlaylist(ArrayList<Songs> songslist, Hashtable<String, Integer> playList, String songName, String playListName) throws Exception {
-    boolean result = false;
-    if(songslist.isEmpty()||playList.isEmpty()||songName==null||playListName==null){
-       throw new JukeBoxException("Please provide all the required values");}
-    else  {
-        int playlistID = playList.get(playListName);
-        int songID = 0;
-        for (Songs songId : songslist) {
-            if(songId.getSongName().equalsIgnoreCase(songName)){
-                songID = songId.getSongID();
+   boolean result;
+    if(songName!=null&& playListName!=null&&!songslist.isEmpty()&&!playList.isEmpty()){
+        int playlistId;
+        int songId=0;
+        for( Songs song:songslist){
+            if(song.getSongName().equalsIgnoreCase(songName)){
+                songId=song.getSongID();
                 result=true;
                 break;
-            } }
-            if (songID == 0) {
-                throw new JukeBoxException("The given SongID not there");
-            } else if (playlistID == 0) {
-                throw new JukeBoxException("the playlist is not there");
-
-            } else {
-                result = playListContentDAO.addSongsToPlayList(songID, playlistID);
+            }}
+        if(songId==0){
+            throw new Exception("Song is not present in JukeBox");
+        } else if (!playList.containsKey(playListName)) {
+            throw new Exception("Playlist Name is not present");
+        }else{
+            playlistId=playList.get(playListName);
+            result= playListContentDAO.addSongsToPlayList(songId,playlistId);
+        }
+    }else {
+        throw new Exception("please provide all details");
+    }
+    return result;
+}
+public boolean assAlbumToPlaylist(ArrayList<Songs> songslist, Hashtable<String, Integer> playList, String albumName,String playListName) throws Exception{
+    boolean result=false;
+    if(albumName!=null&&playListName!=null&&!songslist.isEmpty()&&!playList.isEmpty()){
+        int playlistId;
+        ArrayList<Integer> songIdList=new ArrayList<>();
+        for(Songs song:songslist){
+            if(song.getAlbum().equalsIgnoreCase(albumName)){
+                songIdList.add(song.getSongID());
+                break;
             }
         }
-    return result;}
-public boolean assAlbumToPlaylist(ArrayList<Songs> songslist, Hashtable<String, Integer> playList, String albumName,String playListName) throws Exception{
- boolean result = false;
- if(songslist.isEmpty()||playList.isEmpty()||albumName==null||playListName==null) {
- throw new Exception("Please provide all the required values");}
- else{
-     int playlistID = playList.get(playListName.trim());
-     ArrayList<Integer> songIdList = new ArrayList<>();
-     for(Songs songs:songslist){
-         if(songs.getAlbum().trim().equalsIgnoreCase(albumName.trim())){
-             songIdList.add(songs.getSongID());
-             result=true;
-         }
-     }
-     if(playlistID==0){
-       throw new Exception("Playlist Not Present");
-     } else if (songIdList.isEmpty()) {throw new Exception("Song ID not present");}
-     else { for(int id:songIdList){
-         result=playListContentDAO.addSongsToPlayList(id,playlistID);
-     }}
- }
-    return result;}
+        if(songIdList.isEmpty()){
+            throw new Exception("Entered Album is Not Present");
+        } else if (!playList.containsKey(playListName)) {
+            throw new Exception("Given Playlist name is not present");
+        }else {
+            playlistId=playList.get(playListName);
+            for(int id:songIdList){
+                result=playListContentDAO.addSongsToPlayList(playlistId,id);
+            }
+        }
+    }else {
+        throw new Exception("please provide all details");
+    }return result;
+}
     public ArrayList<Songs> playListContent(String playListName,Hashtable<String, Integer> playList,ArrayList<Songs> songslist)throws Exception{
         ArrayList<Integer> songIdList;
         ArrayList<Songs> songList = null;
