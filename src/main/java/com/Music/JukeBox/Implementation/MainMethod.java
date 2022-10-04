@@ -11,6 +11,7 @@ import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.sql.SQLIntegrityConstraintViolationException;
 import java.util.*;
 
 public class MainMethod {
@@ -300,7 +301,7 @@ public class MainMethod {
                                  switch (action){
                                     case 1: playerService.pause();
                                             break;
-                                    case 2: //playerService.resume(id);
+                                    case 2:
                                             playerService.play();
                                             break;
                                     case 3: playerService.forward();
@@ -356,11 +357,11 @@ public class MainMethod {
                                 System.out.println("All PlayList's Deleted Successfully");
                             else{
                                 System.out.println("There Are No Playlist's to Delete");}
-                            boolean deletesongs=songsService.deleteSongTable();
-                            if(deletesongs)
+                           /*  boolean deletesongs=songsService.deleteSongTable();
+                              if(deletesongs)
                                 System.out.println("All Songs Deleted successfully");
                             else{
-                                System.out.println("There Are No Songs to Delete");}
+                                System.out.println("There Are No Songs to Delete");} */
                             break;
                 }
                 System.out.println("------------------------------------------------------------------------------------------------------------------------");
@@ -369,7 +370,10 @@ public class MainMethod {
                 ans = scanner.next().charAt(0);
             }
             while (ans=='y');
-        }  catch (SQLException e) {
+        } catch (SQLIntegrityConstraintViolationException e){
+            System.out.println("Song Already Present in Playlist");
+        }
+        catch (SQLException e) {
             System.out.println(e.getMessage());
         } catch (InputMismatchException e){
             System.out.println("Sorry You have entered wrong input Type");
